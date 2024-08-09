@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="static/js/settings.js"></script>
+    <link rel="stylesheet" href="static/css/settings.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Configuration Settings</h1>
+    <form id="settingsForm" class="form-settings">
+        <div class="form-group">
+            <label for="requestsTimeToSend">Requests Time To Send:</label>
+            <input type="number" id="requestsTimeToSend" name="requestsTimeToSend" class="form-control">
+            <small class="text-muted">Количество секунд, через сколько делать запрос на insert в clickhhose</small>
+        </div>
+        <div class="form-group">
+            <label for="insertAttemptsRequests">Insert Attempts Requests:</label>
+            <input type="number" id="insertAttemptsRequests" name="insertAttemptsRequests" class="form-control">
+            <small class="text-muted">Количество попыток insert в clickhhose</small>
+        </div>
+        <div class="form-group">
+            <label for="histSecPerformanceThreads">Hist Sec Performance Threads:</label>
+            <input type="number" id="histSecPerformanceThreads" name="histSecPerformanceThreads" class="form-control">
+            <small class="text-muted">Секунды, длительность сохранения истории потоков и очереди</small>
+        </div>
+        <div class="form-group">
+            <label for="saveProxyDB">Save Proxy DB:</label>
+            <input type="number" id="saveProxyDB" name="saveProxyDB" class="form-control">
+            <small class="text-muted">Минуты, периодичность сохранения всех прокси в бд</small>
+        </div>
+        <div class="form-group">
+            <label for="checkerTimeoutSeconds">Checker Timeout Seconds:</label>
+            <input type="number" id="checkerTimeoutSeconds" name="checkerTimeoutSeconds" class="form-control">
+            <small class="text-muted">Секунды, таймаут запросов чекера</small>
+        </div>
+        <div class="form-group">
+            <label for="checkerStreamsMin">Checker Streams Min:</label>
+            <input type="number" id="checkerStreamsMin" name="checkerStreamsMin" class="form-control">
+            <small class="text-muted">Минимальное число потоков чекера</small>
+        </div>
+        <div class="form-group">
+            <label for="checkerStreamsMax">Checker Streams Max:</label>
+            <input type="number" id="checkerStreamsMax" name="checkerStreamsMax" class="form-control">
+            <small class="text-muted">Максимальное число потоков чекера</small>
+        </div>
+        <div class="form-group">
+            <label for="checkerURL">Checker URL:</label>
+            <input type="text" id="checkerURL" name="checkerURL" class="form-control">
+            <small class="text-muted">URL адрес на который будет делать запрос чекер, если пусто - попытаться определить внешний ip адрес текущего сервера и делать запросы на него</small>
+        </div>
+        <div class="form-group">
+            <label for="loaderPeriodMinutes">Loader Period Minutes:</label>
+            <input type="number" id="loaderPeriodMinutes" name="loaderPeriodMinutes" class="form-control">
+            <small class="text-muted">Минуты, Периодичность загрузки списка прокси для каждого пакета</small>
+        </div>
+        <div class="form-group">
+            <label for="checkerPackagesSecond">Checker Packages Second:</label>
+            <input type="number" id="checkerPackagesSecond" name="checkerPackagesSecond" class="form-control">
+            <small class="text-muted">Секунды, через какое время делать перераспределение прокси по пакетам</small>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" id="saveToFile" name="saveToFile" class="form-check-input">
+            <label for="saveToFile" class="form-check-label">Save to file</label>
+            <small class="text-muted">Сохранение в файл</small>
+        </div>
+        <button type="button" onclick="submitSettings()" class="btn btn-primary btn-block">Save</button>
+    </form>
+</div>
+</body>
+</html>

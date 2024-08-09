@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy List</title>
+    <script src="https://unpkg.com/ag-grid-enterprise@31.3.1/dist/ag-grid-enterprise.min.js"></script>
+    <script src="/static/js/statistic.js"></script>
+    <style>
+        html, body, #packageTable {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Proxy List</h1>
+<div class="proxy-info">
+    <span>Count Package: <span id="count-package">0</span></span>
+    <span>Total All: <span id="total-all">0</span></span>
+    <span>Total Unique All: <a href="/package"><span id="total-unique-all">0</span></a></span>
+    <span>Total Work: <span id="total-work">0</span></span>
+</div>
+<div class="graph">
+    <span><a href="/graphs" target="_blank">Графики</a></span>
+</div>
+<div id="packageTable" style="height: 100%;" class="ag-theme-quartz"></div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+.proxy-info {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.proxy-info span {
+    font-weight: normal;
+}

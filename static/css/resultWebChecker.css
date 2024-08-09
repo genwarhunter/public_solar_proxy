@@ -1,0 +1,27 @@
+/* Custom CSS */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+#progressBar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin: 20px 0;
+    overflow: hidden; /* Ensure content overflow is hidden */
+}
+
+#progress {
+    height: 30px;
+    width: 0;
+    background-color: #007bff; /* Primary blue color */
+    text-align: center;
+    line-height: 30px; /* Centering text vertically */
+    color: white;
+    border-radius: 5px;
+    transition: width 0.4s ease;
+}
